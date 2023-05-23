@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Occult for kids!</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="basscss.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/simplebar/simplebar.css">
+	<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAEaSURBVFhH7ZZZDoMwDESTXoBfPuH+h2w7iBHGtZ2EskiIJ0VZvGTiACK/v6QLOUVAznkeLXBbU4AVQFr1IlcU8yOgGFCwS2p8N11Bi4gSr7lvYq/NwSYBe3K5gNO+A3huJNz28AqM45j6vp9nCxQUVkCrJrVF8+IlZgUQGAXXJMbJLaT4aYwKSLA+DMPUd1039Wy0y7mF9JFN28DqCqKTwc2yi/AVNVVC7OoKvGRAJ4Rv5F/LvT9EXoVk9ZoFtJZd+3POK3UFtG6kkfEYs2lMAXTUAd66BU7ovQlYZ45D/wc8ATLWrECteonlb/npNbcCNeol9PfsHuFDqJNFyWnzhHsUX0MKiTb/h9N+SDyKFTiaR8Aj4GIBKX0A5wEEOEAYN50AAAAASUVORK5CYII=" />
+	<script type="text/javascript" src="libs/simplebar/simplebar.js"></script>
+	<script type="text/javascript" src="libs/angular-1.8.2/angular.min.js"></script>
+	<script type="text/javascript" src="libs/angular-1.8.2/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#!">Home</a></li>
+                <li><a href="#!about">About</a></li>
+                <li><a href="#!categories">Categories</a></li>
+                <li><a href="#!games">Games</a></li>
+                <!-- <li><a href="#">Testimonial</a></li> -->
+                <!-- <li><a href="#">Contact</a></li> -->
+            </ul>
+            <h1 class="logo">OCCULT FOR KIDS</h1>
+        </div>
+    </nav>
+
+    <br/><br/><br/><br/>
+	<main data-simplebar>
+		​<div ng-view />
+	</main>
+	<script>
+	var app = angular.module("myApp", ["ngRoute"]);
+	app.config(function($routeProvider) {
+	    $routeProvider
+	    .when("/", {
+	        templateUrl : "pages/home.htm"
+	    })
+	    .when("/categories", {
+	        templateUrl : "pages/categories.htm"
+	    })
+	    .when("/about", {
+	        templateUrl : "pages/about.htm"
+	    })
+	    .when("/movements", {
+	        templateUrl : "pages/movements.htm"
+	    })
+	    .when("/games", {
+	        templateUrl : "pages/games.htm"
+	    })
+	    .when("/class1/english", {
+	        templateUrl : "pages/class 1/english.htm"
+	    })
+	    .when("/class1/drawing", {
+	        templateUrl : "pages/class 1/drawing.htm"
+	    })
+	    .when("/class1/maths", {
+	        templateUrl : "pages/class 1/maths.htm"
+	    })
+	    .when("/class1/science", {
+	        templateUrl : "pages/class 1/science.htm"
+	    });
+	});
+	</script>
+</body>
+</html>

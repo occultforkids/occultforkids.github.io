@@ -1,2 +1,2 @@
-# occultforkids
-Kids should be taught the occult knowledge that's served them in textbooks.
+# sukhchainn.github.io
+My portfolio site.
